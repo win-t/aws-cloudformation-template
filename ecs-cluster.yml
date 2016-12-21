@@ -349,7 +349,7 @@ Resources:
       ScheduleExpression: rate(5 minutes)
       Targets:
         - Arn: !GetAtt ScalingDownLambda.Arn
-          Id: !Sub Lambda-${ScalingDownLambda}
+          Id: ScalingDownLambdaTarget
 
   ScheduledEventActionPolicy:
     Condition: IsEnableAutoScalingDown
