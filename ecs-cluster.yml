@@ -146,30 +146,30 @@ Conditions:
 
 Mappings:
 
-  # see: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-optimized_AMI_launch_latest
+  # see: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI_launch_latest.html
   AmiRegionMap:
     us-east-1:
-      amd64: ami-6df8fe7a
+      amd64: ami-275ffe31
     us-east-2:
-      amd64: ami-c6b5efa3
+      amd64: ami-62745007
     us-west-1:
-      amd64: ami-1eda8d7e
+      amd64: ami-689bc208
     us-west-2:
-      amd64: ami-a2ca61c2
+      amd64: ami-62d35c02
     eu-west-1:
-      amd64: ami-ba346ec9
+      amd64: ami-95f8d2f3
     eu-west-2:
-      amd64: ami-42c5cf26
+      amd64: ami-bf9481db
     eu-central-1:
-      amd64: ami-e012d48f
+      amd64: ami-085e8a67
     ap-northeast-1:
-      amd64: ami-08f7956f
+      amd64: ami-f63f6f91
     ap-southeast-1:
-      amd64: ami-f4832f97
+      amd64: ami-b4ae1dd7
     ap-southeast-2:
-      amd64: ami-774b7314
+      amd64: ami-fbe9eb98
     ca-central-1:
-      amd64: ami-be45f7da
+      amd64: ami-ee58e58a
 
 
 Resources:
@@ -229,7 +229,7 @@ Resources:
             VolumeType: gp2
             VolumeSize: !Ref RootBlockSize
 
-        # see: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#ecs-ami-storage-config
+        # see: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-ami-storage-config.html#ecs-AMI-LVM
         # /dev/xvdcz need to be a block device
         - Fn::If:
           - IsUseInstanceStoreBlock
